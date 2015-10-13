@@ -28,3 +28,9 @@ node_modules
 
 # JetBrains .idea folders/files
 .idea
+
+# Bower Components
+bower_components
+
+# Npm Modules
+node_modules
