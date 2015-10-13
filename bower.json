@@ -1,0 +1,19 @@
+{
+  "name": "HappyToDo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/DerekSeverson/HappyToDo",
+  "authors": [
+    "Derek Severson <programmer.severson@gmail.com>"
+  ],
+  "description": "Simple Todo App",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
