@@ -18,5 +18,8 @@
   "homepage": "https://github.com/DerekSeverson/HappyToDo#readme",
   "dependencies": {
     "hapi": "^10.4.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
   }
 }
