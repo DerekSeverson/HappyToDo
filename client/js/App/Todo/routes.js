@@ -8,35 +8,37 @@
 
   function configAppTodo($stateProvider, $urlRouterProvider) {
 
-    //$urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/');
 
-    //$stateProvider
-    //
-    //  .state('state', {
-    //    url: 'state',
-    //    data: {
-    //
-    //    },
-    //    resolve: {
-    //
-    //    },
-    //    views: {
-    //
-    //    }
-    //  })
-    //
-    //  .state('state.child', {
-    //    url: 'child',
-    //    data: {
-    //
-    //    },
-    //    resolve: {
-    //
-    //    },
-    //    views: {
-    //
-    //    }
-    //  });
+    $stateProvider
+
+      .state('todos', {
+        url: '/',
+        resolve: {
+          'TodosViewModel': [function () {
+
+            return {
+              listOfTodos: [
+                'Take Dog for Walk',
+                'Wash All the Dishes',
+                'Make the Bed'
+              ]
+            };
+          }]
+        },
+        views: {
+          'main': {
+            template: '<todo-list bind-view-model="ctrl.ViewModel"></todo-list>',
+            controllerAs: 'ctrl',
+            controller: ['TodosViewModel',
+              function (TodosViewModel) {
+                this.ViewModel = TodosViewModel;
+              }
+            ]
+          }
+        }
+      });
+
 
   }
 

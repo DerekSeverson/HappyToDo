@@ -17,6 +17,7 @@ gulp.task('dev', ['js', 'styles', 'html']);
 gulp.task('js', function () {
 
   return gulp.src(jsSources())
+    .pipe($.injectStringifiedHtml())
     .pipe($.concat('todo.js'))
     .pipe(gulp.dest(publicDirectory('js')));
 });
@@ -54,7 +55,9 @@ function jsSources() {
       'angular/angular.min.js',
       'angular-bootstrap/ui-bootstrap.min.js',
       'angular-bootstrap/ui-bootstrap-tpls.mins.js',
+      'angular-route/angular-route.min.js',
       'angular-ui-router/release/angular-ui-router.min.js',
+      'angular-toastr/dist/angular-toastr.min.js',
       'ngprogress-lite/ngprogress-lite.min.js',
       'ui-select/dist/select.min.js',
       'ng-file-upload/ng-file-upload-all.min.js',

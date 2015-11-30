@@ -28,6 +28,7 @@
     "ui-select": "angular-ui-select#~0.13.2",
     "angular-ui-router": "~0.2.15",
     "angular-toastr": "~1.6.0",
-    "ng-file-upload": "~10.1.0"
+    "ng-file-upload": "~10.1.0",
+    "angular-route": "~1.4.8"
   }
 }

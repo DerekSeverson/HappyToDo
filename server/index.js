@@ -35,7 +35,7 @@ server.register({
 server.route([
   {
     method: 'GET',
-    path: '/',
+    path: '/todo',
     handler: {
       file: 'index.html'
     }
