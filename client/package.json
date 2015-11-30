@@ -22,6 +22,7 @@
     "gulp-newer": "^1.1.0",
     "gulp-ng-templates": "0.0.6",
     "gulp-sourcemaps": "^1.6.0",
+    "lodash": "^3.10.1",
     "merge2": "^0.3.6",
     "run-sequence": "^1.1.5"
   }

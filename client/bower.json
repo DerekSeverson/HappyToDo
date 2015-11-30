@@ -18,6 +18,16 @@
   ],
   "dependencies": {
     "lodash": "~3.10.1",
-    "angular": "~1.4.7"
+    "angular": "~1.4.7",
+    "angular-bootstrap": "~0.14.3",
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.5.0",
+    "ngprogress-lite": "~1.0.7",
+    "moment": "~2.10.6",
+    "numeral": "numeraljs#~1.5.3",
+    "ui-select": "angular-ui-select#~0.13.2",
+    "angular-ui-router": "~0.2.15",
+    "angular-toastr": "~1.6.0",
+    "ng-file-upload": "~10.1.0"
   }
 }
