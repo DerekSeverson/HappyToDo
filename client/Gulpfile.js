@@ -33,6 +33,14 @@ gulp.task('html', function () {
     .pipe(gulp.dest(publicDir('')));
 });
 
+gulp.task('clean', function () {
+
+  return $.del([
+    publicDir('') + '**/*.*'
+  ], {
+    force: true
+  });
+});
 
 function publicDir(filepath) {
   return path.resolve('../server/public', filepath);
