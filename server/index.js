@@ -1,12 +1,17 @@
 
-var path = require('path');
+var Path = require('path');
 var Hapi = require('hapi');
 
 var server = new Hapi.Server();
 
 server.connection({
   host: 'localhost',
-  port: Number(process.argv[2] || 8080)
+  port: Number(process.argv[2] || 8080),
+  routes: {
+    files: {
+      relativeTo: Path.join(__dirname, 'public')
+    }
+  }
 });
 
 server.register(require('inert'), throwOnNodeCallbackError);
@@ -27,13 +32,23 @@ server.register({
   }
 }, throwOnNodeCallbackError);
 
-server.route({
-  method: 'GET',
-  path: '/',
-  handler: function (request, reply) {
-    reply.file(fromPublicDir('index.html'));
+server.route([
+  {
+    method: 'GET',
+    path: '/',
+    handler: {
+      file: 'index.html'
+    }
+  }, {
+    method: 'GET',
+    path: '/{file*}',
+    handler: {
+      directory: {
+        path: '.'
+      }
+    }
   }
-});
+]);
 
 
 
@@ -49,6 +64,3 @@ function throwOnNodeCallbackError(err) {
   if (err) throw err;
 }
 
-function fromPublicDir(filepath) {
-  return path.resolve(__dirname, '../public', filepath);
-}

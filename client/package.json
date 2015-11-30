@@ -1,0 +1,28 @@
+{
+  "name": "happytodoclient",
+  "version": "1.0.0",
+  "description": "Simple Todo Web App Frontend",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Derek Severson",
+  "license": "MIT",
+  "homepage": "https://github.com/DerekSeverson/HappyToDo#readme",
+  "devDependencies": {
+    "del": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-dedupe": "0.0.2",
+    "gulp-htmlmin": "^1.2.0",
+    "gulp-inject-stringified-html": "^1.0.3",
+    "gulp-less": "^3.0.5",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-newer": "^1.1.0",
+    "gulp-ng-templates": "0.0.6",
+    "gulp-sourcemaps": "^1.6.0",
+    "merge2": "^0.3.6",
+    "run-sequence": "^1.1.5"
+  }
+}
